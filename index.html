@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnus Windsor — MedTech Data &amp; Power BI Consultant | Bayvik Ltd</title>
+<meta name="description" content="I help smaller ostomy, continence and wound-care MedTech companies turn the NHS Supply Chain and prescribing data they already receive into Power BI dashboards — market share, demand by trust, account targeting.">
+<!-- STAGING ONLY: remove the line below before connecting bayvik.com -->
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    /* BAYVIK brand v0.3 */
+    --navy:#2C4A52;        /* petrol blue */
+    --navy-light:#3A5C66;  /* lighter petrol */
+    --accent:#97775A;      /* bronze */
+    --ink:#2A2D33;         /* graphite primary */
+    --muted:#5A5D63;       /* graphite secondary */
+    --bg-light:#F7F7F5;    /* warm off-white */
+    --white:#ffffff;
+    --border:#E8E8E4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--white);}
+  .container{max-width:1040px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{line-height:1.25;color:var(--navy);}
+  h2{font-size:1.7rem;margin-bottom:.5rem;}
+  .kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:.4rem;}
+  section{padding:72px 0;}
+  .section-intro{max-width:640px;color:var(--muted);margin-bottom:2.2rem;}
+
+  /* Header */
+  header{position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--border);z-index:10;}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-weight:700;color:var(--navy);text-decoration:none;font-size:1.05rem;}
+  .brand span{color:var(--accent);letter-spacing:.08em;}
+  nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:.92rem;}
+  nav a:hover{color:var(--accent);}
+  nav .cta{background:var(--navy);color:#fff;padding:8px 16px;border-radius:6px;}
+  nav .cta:hover{background:var(--navy-light);color:#fff;}
+  @media (max-width:720px){nav a:not(.cta){display:none;}}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:96px 0 88px;}
+  .hero h1{color:#fff;font-size:2.5rem;max-width:720px;margin-bottom:1.1rem;}
+  .hero p{max-width:640px;font-size:1.12rem;color:#D6DEE0;margin-bottom:1.8rem;}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:6px;}
+  .btn:hover{filter:brightness(1.1);}
+  .btn.ghost{background:transparent;border:1.5px solid #8FA6AC;margin-left:12px;}
+  .cred-strip{background:var(--navy);border-top:1px solid rgba(255,255,255,.12);}
+  .cred-strip .container{display:flex;flex-wrap:wrap;gap:8px 32px;padding-top:16px;padding-bottom:16px;color:#B6C4C7;font-size:.9rem;}
+  .cred-strip strong{color:#fff;font-weight:600;}
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+  .card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:26px;}
+  .card h3{font-size:1.06rem;margin-bottom:.5rem;}
+  .card p{font-size:.95rem;color:var(--muted);}
+  .alt{background:var(--bg-light);}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;counter-reset:step;}
+  .step{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:26px;position:relative;}
+  .step::before{counter-increment:step;content:counter(step);display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin-bottom:12px;}
+  .step h3{font-size:1.05rem;margin-bottom:.4rem;}
+  .step p{font-size:.95rem;color:var(--muted);}
+
+  /* Audience list */
+  .audience li{list-style:none;padding-left:30px;position:relative;margin-bottom:12px;max-width:680px;}
+  .audience li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700;}
+
+  /* About */
+  .about-flex{display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;}
+  .about-text{flex:1 1 420px;}
+  .about-text p{margin-bottom:1rem;color:var(--ink);}
+
+  /* Contact */
+  .contact{background:var(--navy);color:#fff;text-align:center;}
+  .contact h2{color:#fff;}
+  .contact p{color:#C8D3D6;max-width:560px;margin:0 auto 1.6rem;}
+
+  footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.12);color:#9BACB0;font-size:.83rem;}
+  footer .container{padding-top:22px;padding-bottom:22px;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;}
+  footer a{color:#C2CED1;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">Magnus Windsor <span>· Bayvik</span></a>
+    <nav>
+      <a href="#services">What I do</a>
+      <a href="#who">Who it's for</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a class="cta" href="mailto:magnus@bayvik.com">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container">
+    <h1>Your NHS data already holds the answers. I build the dashboards that surface them.</h1>
+    <p>I help smaller ostomy, continence and wound-care MedTech companies turn the NHS Supply Chain and prescribing data they already receive into Power BI dashboards — market share, demand by trust, account targeting — without the cost of a full-time analyst.</p>
+    <a class="btn" href="mailto:magnus@bayvik.com?subject=Intro%20call">Book a 20-minute intro call</a>
+    <a class="btn ghost" href="#services">See what I do</a>
+  </div>
+</section>
+<div class="cred-strip">
+  <div class="container">
+    <div><strong>11 years</strong> at Coloplast</div>
+    <div>Latterly <strong>Senior Commercial Excellence Manager</strong></div>
+    <div><strong>Power BI</strong> specialist</div>
+    <div>Ostomy · Continence · Wound care</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+    <div class="kicker">What I do</div>
+    <h2>From raw NHS data files to decisions your commercial team can act on</h2>
+    <p class="section-intro">Smaller manufacturers receive the same NHS data the big players do — but usually without anyone whose job it is to turn it into insight. That's the gap I fill.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>NHS Supply Chain dashboards</h3>
+        <p>Turn the monthly NHS Supply Chain files you already receive into live Power BI views of demand by trust, product and region — refreshed each month, not rebuilt.</p>
+      </div>
+      <div class="card">
+        <h3>Prescribing &amp; market share analysis</h3>
+        <p>Build market views from national prescribing data: your share, who's growing, where you're winning and losing — down to individual ICBs and products.</p>
+      </div>
+      <div class="card">
+        <h3>Account targeting</h3>
+        <p>Rank trusts and ICBs by opportunity so your field team spends its time on the right doors — backed by data, not gut feel.</p>
+      </div>
+      <div class="card">
+        <h3>Reporting &amp; data foundations</h3>
+        <p>Join up your product, customer and sales data so reports update themselves — including light-touch CRM data work where it helps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="alt">
+  <div class="container">
+    <div class="kicker">Who it's for</div>
+    <h2>Built for smaller MedTech companies</h2>
+    <p class="section-intro">I work with UK manufacturers and distributors in ostomy, continence and wound care — typically companies that:</p>
+    <ul class="audience">
+      <li>Receive NHS Supply Chain or prescribing data but don't have an in-house analyst to use it</li>
+      <li>Make commercial decisions on spreadsheets that take days to update — or on gut feel</li>
+      <li>Want the analytics capability of a major manufacturer without the headcount</li>
+      <li>Need a clear, fixed-cost way to try it before committing to anything ongoing</li>
+    </ul>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="kicker">How it works</div>
+    <h2>Low-risk by design</h2>
+    <p class="section-intro">No retainers up front, no long commitments. You see the value before you spend beyond a first fixed-scope project.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>A 20-minute call</h3>
+        <p>Tell me what data you receive and what decisions you're trying to make. I'll tell you honestly whether there's value in it — and show you what it could look like.</p>
+      </div>
+      <div class="step">
+        <h3>A fixed-scope first project</h3>
+        <p>A defined deliverable at a fixed price — typically a working Power BI dashboard on your own data, delivered in weeks, not months.</p>
+      </div>
+      <div class="step">
+        <h3>Ongoing only if it earns it</h3>
+        <p>If the dashboard proves useful, I can keep it refreshed and extend it month by month. If not, you keep what was built and we part as friends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="container about-flex">
+    <div class="about-text">
+      <div class="kicker">About</div>
+      <h2>Magnus Windsor</h2>
+      <p>I spent 11 years at Coloplast, one of the world's largest ostomy and continence care companies, latterly as Senior Commercial Excellence Manager. A large part of that role was exactly this: turning NHS Supply Chain, prescribing and sales data into the dashboards and analysis the commercial organisation ran on.</p>
+      <p>Now I do the same work independently for smaller MedTech companies — businesses that receive the same data but rarely have the in-house capability to use it. I know the datasets, the products, the NHS landscape and the commercial questions, so projects start at the work, not at a glossary.</p>
+      <p>I trade through Bayvik Ltd, a UK limited company.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>See what your data could look like</h2>
+    <p>A 20-minute call is enough to show you what your NHS Supply Chain or prescribing data looks like as a live dashboard. No pitch, no pressure.</p>
+    <a class="btn" href="mailto:magnus@bayvik.com?subject=Intro%20call">magnus@bayvik.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Bayvik Ltd. Registered in England &amp; Wales, company no. 16904003. Registered office: [REGISTERED OFFICE ADDRESS].</div>
+    <div><a href="https://www.linkedin.com/in/magnus-windsor/">LinkedIn</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
