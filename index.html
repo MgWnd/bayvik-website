@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Magnus Windsor — Data &amp; Power BI Consultant | Bayvik Ltd</title>
 <meta name="description" content="Freelance data and BI consultant. I turn the data your business already has into Power BI dashboards and automated reporting — without the cost of a full-time analyst.">
-<!-- STAGING ONLY: remove the line below before connecting bayvik.com -->
-<meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Magnus Windsor — Data &amp; Power BI Consultant | Bayvik">
@@ -84,7 +82,10 @@
   .specialism .btn{white-space:nowrap;}
 
   /* About */
+  .about-grid{display:grid;grid-template-columns:210px 1fr;gap:36px;align-items:start;}
+  .about-photo{width:210px;height:210px;border-radius:12px;object-fit:cover;object-position:center 25%;border:1px solid var(--border);box-shadow:0 6px 22px rgba(44,74,82,.14);}
   .about-text p{margin-bottom:1rem;color:var(--ink);max-width:680px;}
+  @media (max-width:640px){.about-grid{grid-template-columns:1fr;gap:22px;}.about-photo{width:160px;height:160px;}}
 
   /* Contact */
   .contact{background:var(--navy);color:#fff;text-align:center;}
@@ -201,12 +202,15 @@
 
 <section id="about" class="alt">
   <div class="container">
-    <div class="about-text">
+    <div class="about-grid">
+      <img class="about-photo" src="magnus-windsor.jpg" alt="Magnus Windsor, Data &amp; Power BI consultant">
+      <div class="about-text">
       <div class="kicker">About</div>
       <h2>Magnus Windsor</h2>
       <p>I spent 11 years at Coloplast, a global medical device company, latterly as Senior Commercial Excellence Manager. My job was turning company, market and customer data into the dashboards and analysis a commercial organisation runs on — and making sure they got used.</p>
       <p>Now I do that work independently. The industries change; the problem rarely does: useful data, scattered across systems, and nobody with the time or tools to turn it into decisions. I build the model once, automate the refresh, and leave you with reporting that just works.</p>
       <p>I trade through Bayvik Ltd, a UK limited company.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -221,7 +225,7 @@
 
 <footer>
   <div class="container">
-    <div>© 2026 Bayvik Ltd. Registered in England &amp; Wales, company no. 16904003. Registered office: [REGISTERED OFFICE ADDRESS].</div>
+    <div>© 2026 Bayvik Ltd. Registered in England &amp; Wales, company no. 16904003. Registered office: 6 The Moorings, Bridge Street, Deeping St. James, Peterborough, PE6 8FF.</div>
     <div><a href="https://www.linkedin.com/in/magnus-windsor/">LinkedIn</a></div>
   </div>
 </footer>
