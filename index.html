@@ -29,71 +29,27 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--white);}
+  body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--white);display:flex;flex-direction:column;min-height:100vh;}
   .container{max-width:1040px;margin:0 auto;padding:0 24px;}
-  h1,h2,h3{font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.25;color:var(--navy);}
-  h2{font-size:1.7rem;margin-bottom:.5rem;}
+  h1{font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.25;color:#fff;}
   .kicker{font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:600;color:var(--accent);margin-bottom:.4rem;}
-  section{padding:72px 0;}
-  .section-intro{max-width:640px;color:var(--muted);margin-bottom:2.2rem;}
 
-  /* Header */
-  header{position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--border);z-index:10;}
+  header{background:var(--white);border-bottom:1px solid var(--border);}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
   .brand{display:flex;align-items:center;text-decoration:none;}
   .brand img{height:50px;width:auto;display:block;}
-  nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:.92rem;}
-  nav a:hover{color:var(--accent);}
-  nav .cta{background:var(--navy);color:#fff;padding:8px 16px;border-radius:6px;}
-  nav .cta:hover{background:var(--navy-light);color:#fff;}
-  @media (max-width:720px){nav a:not(.cta){display:none;}}
+  .cta{background:var(--navy);color:#fff;text-decoration:none;padding:8px 16px;border-radius:6px;font-size:.92rem;}
+  .cta:hover{background:var(--navy-light);}
 
-  /* Hero */
-  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:96px 0 88px;}
-  .hero h1{color:#fff;font-size:2.5rem;max-width:720px;margin-bottom:1.1rem;}
-  .hero p{max-width:640px;font-size:1.12rem;color:#D6DEE0;margin-bottom:1.8rem;}
+  .hero{flex:1;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;display:flex;align-items:center;padding:80px 0;}
+  .hero h1{font-size:2.5rem;max-width:720px;margin-bottom:1.1rem;}
+  .hero p{max-width:600px;font-size:1.12rem;color:#D6DEE0;margin-bottom:1.8rem;}
   .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:6px;}
   .btn:hover{filter:brightness(1.1);}
-  .btn.ghost{background:transparent;border:1.5px solid #8FA6AC;}
-  .hero .btn{margin:0 12px 14px 0;}
+
   .cred-strip{background:var(--navy);border-top:1px solid rgba(255,255,255,.12);}
   .cred-strip .container{display:flex;flex-wrap:wrap;gap:8px 32px;padding-top:16px;padding-bottom:16px;color:#B6C4C7;font-size:.9rem;}
   .cred-strip strong{color:#fff;font-weight:600;}
-
-  /* Cards */
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
-  .card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:26px;}
-  .card h3{font-size:1.06rem;margin-bottom:.5rem;}
-  .card p{font-size:.95rem;color:var(--muted);}
-  .alt{background:var(--bg-light);}
-
-  /* Steps */
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;counter-reset:step;}
-  .step{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:26px;position:relative;}
-  .step::before{counter-increment:step;content:counter(step);display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin-bottom:12px;}
-  .step h3{font-size:1.05rem;margin-bottom:.4rem;}
-  .step p{font-size:.95rem;color:var(--muted);}
-
-  /* Audience list */
-  .audience li{list-style:none;padding-left:30px;position:relative;margin-bottom:12px;max-width:680px;}
-  .audience li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700;}
-
-  /* Specialism banner */
-  .specialism{background:var(--bg-light);border:1px solid var(--border);border-radius:10px;padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;}
-  .specialism h3{font-size:1.15rem;margin-bottom:.3rem;}
-  .specialism p{color:var(--muted);font-size:.95rem;max-width:560px;}
-  .specialism .btn{white-space:nowrap;}
-
-  /* About */
-  .about-grid{display:grid;grid-template-columns:210px 1fr;gap:36px;align-items:start;}
-  .about-photo{width:210px;height:210px;border-radius:12px;object-fit:cover;object-position:center 25%;border:1px solid var(--border);box-shadow:0 6px 22px rgba(44,74,82,.14);}
-  .about-text p{margin-bottom:1rem;color:var(--ink);max-width:680px;}
-  @media (max-width:640px){.about-grid{grid-template-columns:1fr;gap:22px;}.about-photo{width:160px;height:160px;}}
-
-  /* Contact */
-  .contact{background:var(--navy);color:#fff;text-align:center;}
-  .contact h2{color:#fff;}
-  .contact p{color:#C8D3D6;max-width:560px;margin:0 auto 1.6rem;}
 
   footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.12);color:#9BACB0;font-size:.83rem;}
   footer .container{padding-top:22px;padding-bottom:22px;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;}
@@ -105,13 +61,7 @@
 <header>
   <div class="container nav">
     <a class="brand" href="#top"><img src="bayvik_horizontal_colour.png" alt="Bayvik — Commercial Intelligence"></a>
-    <nav>
-      <a href="#services">What I do</a>
-      <a href="#how">How it works</a>
-      <a href="medtech.html">MedTech &amp; NHS data</a>
-      <a href="#about">About</a>
-      <a class="cta" href="mailto:magnus@bayvik.com?subject=Intro%20call">Get in touch</a>
-    </nav>
+    <a class="cta" href="mailto:magnus@bayvik.com?subject=Enquiry">Get in touch</a>
   </div>
 </header>
 
@@ -119,113 +69,18 @@
   <div class="container">
     <div class="kicker" style="color:#C9B9A6">Commercial Intelligence</div>
     <h1>Your business already has the data. I make it work.</h1>
-    <p>I'm a freelance data and BI consultant. I help small and mid-sized companies turn the data already sitting in their systems and spreadsheets into Power BI dashboards and automated reporting, without the cost of a full-time analyst.</p>
-    <a class="btn" href="mailto:magnus@bayvik.com?subject=Intro%20call">Book a 20-minute intro call</a>
-    <a class="btn ghost" href="#services">See what I do</a>
+    <p>Freelance data and BI consultant. I turn the data you already have into Power BI dashboards and reporting.</p>
+    <a class="btn" href="mailto:magnus@bayvik.com?subject=Enquiry">Get in touch</a>
   </div>
 </section>
+
 <div class="cred-strip">
   <div class="container">
     <div><strong>11 years</strong> building commercial analytics in industry</div>
     <div><strong>Power BI</strong> specialist</div>
-    <div><strong>Fixed-scope</strong> first projects</div>
     <div>UK-based · remote-friendly</div>
   </div>
 </div>
-
-<section id="services">
-  <div class="container">
-    <div class="kicker">What I do</div>
-    <h2>From scattered data to decisions people can act on</h2>
-    <p class="section-intro">Most growing companies already have the data they need, spread across exports, spreadsheets, CRMs and finance systems. What they're missing is someone to join it up and make it usable. That's what I do.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Dashboards &amp; reporting</h3>
-        <p>Power BI dashboards for sales, operations, finance or market performance. Live views that update on their own, so no one rebuilds a spreadsheet every month.</p>
-      </div>
-      <div class="card">
-        <h3>Data foundations</h3>
-        <p>Join the sources behind your reports (CRM, ERP, finance exports, industry data) into one clean model, so every report agrees with the others.</p>
-      </div>
-      <div class="card">
-        <h3>Market &amp; customer insight</h3>
-        <p>Turn industry and customer data into clear views of market share, demand and opportunity, so you target the right accounts with evidence behind you.</p>
-      </div>
-      <div class="card">
-        <h3>Reporting automation</h3>
-        <p>Replace the copy-paste reporting cycle with a one-click refresh, and give your team back the hours they spend assembling numbers.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="who">
-  <div class="container">
-    <div class="kicker">Who it's for</div>
-    <h2>Built for companies without an in-house analyst</h2>
-    <p class="section-intro">I typically work with small and mid-sized businesses that:</p>
-    <ul class="audience">
-      <li>Make important decisions on spreadsheets that take days to update</li>
-      <li>Have useful data sitting in systems and exports that nobody has time to use</li>
-      <li>Want the analytics capability of a much larger company without the headcount</li>
-      <li>Need a clear, fixed-cost way to try it before committing to anything ongoing</li>
-    </ul>
-  </div>
-</section>
-
-<section id="how">
-  <div class="container">
-    <div class="kicker">How it works</div>
-    <h2>Low-risk by design</h2>
-    <p class="section-intro">No retainers up front and no long commitments. You see what the work is worth before spending beyond a first fixed-scope project.</p>
-    <div class="steps">
-      <div class="step">
-        <h3>A 20-minute call</h3>
-        <p>Tell me what data you have and what decisions you're trying to make. I'll give you a straight answer on whether there's value in it, and show you what it could look like.</p>
-      </div>
-      <div class="step">
-        <h3>A fixed-scope first project</h3>
-        <p>A defined deliverable at a fixed price. Usually a working Power BI dashboard built on your own data, ready in a few weeks.</p>
-      </div>
-      <div class="step">
-        <h3>Ongoing only if it earns it</h3>
-        <p>If the dashboard proves useful, I can keep it refreshed and build on it month by month. If it doesn't, you keep what was built and owe nothing more.</p>
-      </div>
-    </div>
-    <div style="height:36px"></div>
-    <div class="specialism">
-      <div>
-        <div class="kicker">Specialism</div>
-        <h3>MedTech &amp; NHS data</h3>
-        <p>I spent 11 years in MedTech and know NHS Supply Chain and prescribing data well. If you're a medical device company, there's a page just for that.</p>
-      </div>
-      <a class="btn" href="medtech.html">MedTech &amp; NHS data →</a>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="alt">
-  <div class="container">
-    <div class="about-grid">
-      <img class="about-photo" src="magnus-windsor.jpg" alt="Magnus Windsor, Data &amp; Power BI consultant">
-      <div class="about-text">
-      <div class="kicker">About</div>
-      <h2>Magnus Windsor</h2>
-      <p>I spent 11 years at Coloplast, a global medical device company, latterly as Senior Commercial Excellence Manager. My job was turning company, market and customer data into the dashboards and analysis a commercial team runs on, and making sure they actually got used.</p>
-      <p>Now I do that work independently, across different industries. The problem is usually the same: useful data spread across systems, and no one with the time or tools to turn it into decisions. I build the model once, automate the refresh, and hand you reporting you can rely on.</p>
-      <p>I trade through Bayvik Ltd, a UK limited company.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>See what your data could look like</h2>
-    <p>A short call is enough to show you what your data could look like as a live dashboard.</p>
-    <a class="btn" href="mailto:magnus@bayvik.com?subject=Intro%20call">magnus@bayvik.com</a>
-  </div>
-</section>
 
 <footer>
   <div class="container">
