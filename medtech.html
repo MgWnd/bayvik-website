@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://bayvik.com/og-image.png">
 <meta property="og:url" content="https://bayvik.com/medtech.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* BAYVIK brand v0.3 */
-    --navy:#2C4A52;
-    --navy-light:#3A5C66;
-    --accent:#97775A;
+    /* BAYVIK brand — finalised 2026-07-01 */
+    --navy:#2E555F;
+    --navy-light:#3A656F;
+    --accent:#BC7A45;
     --ink:#2A2D33;
-    --muted:#5A5D63;
+    --muted:#5C6B70;
     --bg-light:#F7F7F5;
     --white:#ffffff;
     --border:#E8E8E4;
@@ -28,16 +31,16 @@
   html{scroll-behavior:smooth;}
   body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--white);}
   .container{max-width:1040px;margin:0 auto;padding:0 24px;}
-  h1,h2,h3{line-height:1.25;color:var(--navy);}
+  h1,h2,h3{font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.25;color:var(--navy);}
   h2{font-size:1.7rem;margin-bottom:.5rem;}
-  .kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:.4rem;}
+  .kicker{font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:600;color:var(--accent);margin-bottom:.4rem;}
   section{padding:72px 0;}
   .section-intro{max-width:640px;color:var(--muted);margin-bottom:2.2rem;}
 
   header{position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--border);z-index:10;}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .brand{font-weight:700;color:var(--navy);text-decoration:none;font-size:1.05rem;}
-  .brand span{color:var(--accent);letter-spacing:.08em;}
+  .brand{display:flex;align-items:center;text-decoration:none;}
+  .brand img{height:34px;width:auto;display:block;}
   nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:.92rem;}
   nav a:hover{color:var(--accent);}
   nav .cta{background:var(--navy);color:#fff;padding:8px 16px;border-radius:6px;}
@@ -79,7 +82,7 @@
 
 <header>
   <div class="container nav">
-    <a class="brand" href="index.html">Magnus Windsor <span>· Bayvik</span></a>
+    <a class="brand" href="index.html"><img src="bayvik_horizontal_colour.png" alt="Bayvik — Commercial Intelligence"></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="#services">NHS data services</a>
